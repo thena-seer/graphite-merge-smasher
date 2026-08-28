@@ -1,0 +1,19 @@
+{
+  "name": "graphite-merge-smasher",
+  "version": "1.0.0",
+  "description": "Chrome extension that keeps re-queueing a Graphite PR until it merges",
+  "scripts": {
+    "build": "mkdir -p bin && cp manifest.json content.js background.js bin/ && cd bin && zip -r graphite-merge-smasher.zip manifest.json content.js background.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "graphite",
+    "merge-queue"
+  ],
+  "author": "Thena Seer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thena-seer/graphite-merge-smasher"
+  }
+}

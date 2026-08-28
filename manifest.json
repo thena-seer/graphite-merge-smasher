@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Graphite Merge Smasher",
+  "version": "1.0.0",
+  "description": "Keeps re-queueing a Graphite PR until it actually merges",
+  "action": {
+    "default_title": "Arm merge smasher on this PR"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.graphite.dev/*",
+        "https://app.graphite.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://app.graphite.dev/*",
+    "https://app.graphite.com/*"
+  ],
+  "permissions": ["storage"]
+}
